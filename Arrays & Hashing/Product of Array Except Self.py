@@ -11,7 +11,3 @@ def productExceptSelf(nums):
         postfix *= nums[i]
 
     return answer
-
-
-nums = [1, 2, 3, 4]
-print(productExceptSelf(nums))
