@@ -19,4 +19,4 @@ def generateParenthesis(n):
     backtrack(0, 0)
     return res
 
-print(generateParenthesis(5))
+print(generateParenthesis(2))
