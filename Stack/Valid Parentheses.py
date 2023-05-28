@@ -13,6 +13,3 @@ def isValid(s):
             else:
                 stack.pop()
     return len(stack) == 0
-
-
-print(isValid("{[]}"))
