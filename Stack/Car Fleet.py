@@ -1,3 +1,6 @@
+import random
+
+
 def carFleet(target, position, speed):
     stack = []
 
@@ -6,9 +9,7 @@ def carFleet(target, position, speed):
 
     for i in range(len(posAndSpeed)):
         arrival = (target - posAndSpeed[i][0]) / posAndSpeed[i][1]
-        while stack and arrival < stack[-1]:
-            stack.pop()
         stack.append(arrival)
+        if len(stack) >= 2 and arrival <= stack[-2]:
+            stack.pop()
     return len(stack)
-
-print(carFleet(100, [0,2,4],[4,2,1]))
