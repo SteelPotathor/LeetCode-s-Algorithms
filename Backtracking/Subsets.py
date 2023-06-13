@@ -1,6 +1,3 @@
-from copy import deepcopy
-
-
 def subsets(nums):
     res = []
     sol = []
@@ -8,12 +5,11 @@ def subsets(nums):
     def backtrack(i):
         if i >= len(nums):
             res.append(sol.copy())
-            return
-
-        sol.append(nums[i])
-        backtrack(i + 1)
-        sol.pop()
-        backtrack(i + 1)
+        else:
+            sol.append(nums[i])
+            backtrack(i + 1)
+            sol.pop()
+            backtrack(i + 1)
 
     backtrack(0)
     return res
